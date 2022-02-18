@@ -1,0 +1,6 @@
+.bashrc
+.iptables.rules
+.tmux.conf
+.xinitrc
+.vimrc
+.config/rofi/mytheme.rasi

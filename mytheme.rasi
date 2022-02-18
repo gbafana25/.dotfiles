@@ -1,0 +1,90 @@
+* {
+	bgblack:	#101011;
+	fgwhite:	#ffffff;
+	selectcol:	#db0217;
+	prompt:		#ff9e4a;
+	font:		"DejaVu Sans Mono Bold 14";
+	background-color:	@bgblack;
+}
+
+window {
+	padding: 15px;
+	anchor: center;
+
+}
+
+mainbox {
+	background-color: @bgblack;
+	spacing: 0px;
+	children: [inputbar, listview, message]; 
+}
+
+listview {
+	fixed-height: false;
+	dynamic: true;
+	spacing: 0px;
+	padding: 1px 0px 0px 0px;
+	margin: 0px 0px 1px 0px;
+	background: @blackdarkest;
+}
+
+message {
+	background-color: @fgwhite;
+	padding: 6px 10px;
+}
+
+mode-switcher {
+	background-color: @bgblack;
+}
+
+textbox {
+	text-color:@fgwhite;
+
+}
+
+element normal.urgent {
+	text-color: @fgwhite;
+
+}
+
+element normal.normal {
+	text-color: @fgwhite;
+
+}
+
+element normal.active {
+	text-color: @fgwhite;
+
+}
+
+element selected.normal {
+	text-color: @selectcol;
+
+}
+
+element alternate.normal {
+	text-color: @fgwhite;
+
+}
+
+prompt {
+	text-color: @fgwhite;
+}
+
+textbox-prompt-colon {
+	expand: false;
+	str:	" :: ";
+	margin:	0px;
+	text-color: @fgwhite;
+
+}
+
+entry {
+	text-color: @fgwhite;
+	spacing: 15px;
+}
+
+inputbar {
+	children: [prompt, textbox-prompt-colon, entry];
+	spacing: 0px;
+}
