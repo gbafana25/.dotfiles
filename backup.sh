@@ -1,6 +1,7 @@
 #!/bin/bash
 
 HOME_DIR=$2
+DFILES="other_dotfiles"
 
 save_dotfiles() {
 	# add dotfiles
@@ -13,7 +14,7 @@ save_dotfiles() {
 	cp $HOME_DIR/st/config.h ./st
 	cp $HOME_DIR/larger-st/config.h ./larger-st
 	while read -r file; do
-	cp -r $HOME_DIR/$file .
+	cp -r $HOME_DIR/$file ./$DFILES
 	done < dfile_list.txt
 	
 
@@ -24,8 +25,16 @@ restore_dotfiles() {
 	cp st/config.h $HOME_DIR/st/
 	cp larger-st/config.h $HOME_DIR/larger-st/
 	while read -r file; do
-	cp -r $file $HOME_DIR
+	cp -r ./$DFILES/$file $HOME_DIR
 	done < dfile_list.txt
+
+}
+
+install_pkgs() {
+	while read -r f; do
+	sudo apt-get install -y $f
+	done < short_pkg_list.txt
+
 
 }
 
@@ -35,4 +44,6 @@ then
 elif [ $1 == "restore" ]
 then
 	restore_dotfiles
+elif [ $1 == "pkgs" ]
+	install_pkgs
 fi
