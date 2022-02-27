@@ -45,5 +45,6 @@ elif [ $1 == "restore" ]
 then
 	restore_dotfiles
 elif [ $1 == "pkgs" ]
+then
 	install_pkgs
 fi
