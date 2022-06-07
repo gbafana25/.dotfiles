@@ -96,7 +96,7 @@ alias linksrch='links lite.duckduckgo.com/lite'
 alias poweroff='systemctl poweroff'
 alias resudo="sudo !!"
 alias lock="systemctl suspend && logout"
-#alias trash="mv -T $1 ~/.trash"
+#alias trash="sudo mv $1 $HOME/.trash/$1"
 
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
