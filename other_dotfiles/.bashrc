@@ -125,7 +125,9 @@ fi
 
 PS1='\[\e[1;32m\]\u\[\e[m\]\[\e[1;31m\]::\[\e[m\][\w]> '
 PATH=$PATH:$HOME/.local/bin
-. "$HOME/.cargo/env"
+PATH=$PATH:$HOME/.helper_scripts
+PATH=$PATH:$HOME/pycharm-2022.2.1/bin
+#. "$HOME/.cargo/env"
 
 # loading nvm causes slight delay in terminal start time
 # only enable when needed
