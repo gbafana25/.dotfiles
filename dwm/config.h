@@ -2,7 +2,7 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"monospace:size=16"
+	"monospace:size=18"
 };
 static const char dmenufont[]       = "monospace:size=13";
 static const char normbordercolor[] = "#444444";
@@ -56,12 +56,13 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *roficmd[] = {"rofi", "-theme", "mytheme", "-show", "drun", "-sidebar-mode", "-terminal", "st", NULL};
-static const char *firefoxcmd[] = {"firefox", NULL};
 static const char *locksleepcmd[] = {"slock", "systemctl", "suspend", "-i", NULL};
 static const char *lockcmd[] = {"slock", NULL};
 static const char *termcmd[]  = { "st", NULL };
 static const char *bigterm[] = {"larger-st", NULL};
 static const char *chromiumcmd[] = {"chromium", NULL};
+static const char *operacmd[] = {"opera", NULL};
+static const char *firefoxcmd[] = {"firefox-esr", NULL};
 //static const char *suspend[] = { "systemctl", "suspend", NULL };
 
 static Key keys[] = {
@@ -71,7 +72,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = bigterm } },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,      	   {.v = locksleepcmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,      	   {.v = lockcmd } },
-	{ MODKEY,			XK_f,	   spawn,          {.v = firefoxcmd } },
+	{ MODKEY,			XK_f,	   spawn,          {.v = firefoxcmd} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },

@@ -92,11 +92,10 @@ fi
 #alias la='ls -A'
 #alias l='ls -CF'
 alias ls='ls -lah --color=auto'
-alias linksrch='links lite.duckduckgo.com/lite'
+alias linksrch='lynx lite.duckduckgo.com/lite'
 alias poweroff='systemctl poweroff'
 alias resudo="sudo !!"
 alias lock="systemctl suspend && logout"
-#alias trash="sudo mv $1 $HOME/.trash/$1"
 
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
@@ -126,7 +125,6 @@ fi
 PS1='\[\e[1;32m\]\u\[\e[m\]\[\e[1;31m\]::\[\e[m\][\w]> '
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.helper_scripts
-PATH=$PATH:$HOME/pycharm-2022.2.1/bin
 #. "$HOME/.cargo/env"
 
 # loading nvm causes slight delay in terminal start time
