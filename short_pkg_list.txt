@@ -16,6 +16,10 @@ strace
 objdump
 cmake
 nmap
+xorg
 libxinerama-dev
 libxft-dev
 libx11-dev
+chromium
+iptables
+unzip
