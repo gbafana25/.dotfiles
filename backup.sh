@@ -43,10 +43,23 @@ save_dotfiles() {
 
 }
 
+install_pkgs() {
+	while read -r f; do
+	sudo apt-get install -y $f
+	done < short_pkg_list.txt
+
+
+}
+
+
 restore_dotfiles() {
+	install_pkgs
 	while read -r file; do
 	cp -r $PD/$DFILES/$file $HOME_DIR/
 	done < dfile_list.txt
+	# save iptables rules
+	sudo iptables-restore < $HOME/.iptables.rules
+	sudo iptables-save > /etc/iptables/rules.v4
 	read -p "Would you like to setup dwm? [y/n] " DFLAG
 	case $DFLAG in
 	Y|y) 
@@ -66,14 +79,6 @@ restore_dotfiles() {
 		echo "skipping..."
 		;;
 	esac
-
-}
-
-install_pkgs() {
-	while read -r f; do
-	sudo apt-get install -y $f
-	done < short_pkg_list.txt
-
 
 }
 
