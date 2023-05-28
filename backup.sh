@@ -20,8 +20,8 @@ install_term() {
 	echo "Downloading and installing st and scroll..."
 	cd $HOME_DIR
 	git clone https://git.suckless.org/st
-	cp st/config.h $HOME_DIR/st/config.h
-	cd $HOME_DIR/st/
+	cp ~/.dotfiles/st/config.h st/config.h
+	cd ~/st/
 	sudo make clean install
 
 }
