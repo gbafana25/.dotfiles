@@ -16,3 +16,6 @@ strace
 objdump
 cmake
 nmap
+libxinerama-dev
+libxft-dev
+libx11-dev

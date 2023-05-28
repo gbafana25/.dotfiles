@@ -102,6 +102,7 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$HOME/Downloads/android-studio/bin
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -125,6 +126,7 @@ fi
 PS1='\[\e[1;32m\]\u\[\e[m\]\[\e[1;31m\]::\[\e[m\][\w]> '
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.helper_scripts
+PATH=$PATH:$HOME/wifi-menu/
 #. "$HOME/.cargo/env"
 
 # loading nvm causes slight delay in terminal start time
@@ -132,3 +134,7 @@ PATH=$PATH:$HOME/.helper_scripts
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Load Angular CLI autocompletion.
+#source <(ng completion script)

@@ -8,7 +8,7 @@ install_wm() {
 	echo "Downloading and installing DWM..."
 	cd $HOME_DIR
 	apt source dwm
-	cp $PD/dwm/config.h $HOME_DIR/dwm-*/
+	cp $HOME_DIR/.dotfiles/dwm/config.h $HOME_DIR/dwm-*/
 	cd $HOME_DIR/dwm-*/
 	sudo make clean install
 
@@ -19,7 +19,7 @@ install_term() {
 	echo "Downloading and installing st and scroll..."
 	cd $HOME_DIR
 	git clone https://git.suckless.org/st
-	cp $PD/st/config.h.st $HOME_DIR/st/
+	cp $HOME_DIR/.dotfiles/st/config.h.st $HOME_DIR/st/
 	cd $HOME_DIR/st/
 	sudo make clean install
 
