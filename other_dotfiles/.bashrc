@@ -97,12 +97,21 @@ alias poweroff='systemctl poweroff'
 alias resudo="sudo !!"
 alias lock="systemctl suspend && logout"
 
+export CLASSPATH=$HOME/apache-tomcat-8.5.90/lib/:$HOME/apache-tomcat-8.5.90/lib/servlet-api.jar:$HOME/apache-tomcat-8.5.90/lib/commons-codec-1.11.jar:$HOME/apache-tomcat-8.5.90/lib/mysql-connector-java-8.0.19.jar:$HOME/apache-tomcat-8.5.90/lib/json.jar
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$HOME/Downloads/android-studio/bin
+export PATH=$PATH:$HOME/apache-tomcat-8.5.90/lib/
+export PATH=$PATH:$HOME/apache-tomcat-8.5.90/lib/servlet-api.jar
+export PATH=$PATH:$HOME/apache-tomcat-8.5.90/lib/commons-codec-1.11.jar
+export PATH=$PATH:$HOME/apache-tomcat-8.5.90/lib/mysql-connector-java-8.0.19.jar
+export PATH=$PATH:$HOME/apache-tomcat-8.5.90/lib/json.jar
+export PATH=$PATH:$HOME/sadguriplay
+export PATH=$PATH:/usr/local/go/bin
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -127,7 +136,11 @@ PS1='\[\e[1;32m\]\u\[\e[m\]\[\e[1;31m\]::\[\e[m\][\w]> '
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.helper_scripts
 PATH=$PATH:$HOME/wifi-menu/
-#. "$HOME/.cargo/env"
+PATH=$PATH:$HOME/passman/
+PATH=$PATH:$HOME/Postman
+export PATH=$PATH:$HOME/.cargo/env
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/lib/x86_64-linux-gnu/glib-2.0
+export PATH=$PATH:$HOME/.local/kitty.app/bin
 
 # loading nvm causes slight delay in terminal start time
 # only enable when needed

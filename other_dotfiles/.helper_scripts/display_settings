@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+both() {
+	xrandr --auto
+	xrandr --output HDMI-1 --left-of eDP-1
+
+}
+
+builtin_only() {
+	xrandr --auto
+
+}
+
+cli_buff() {
+	fbset -g 1920 1080 1920 1080 32
+
+
+}
+
+if [ $1 == "both" ]
+then
+	both
+elif [ $1 == "builtin" ]
+then
+	builtin_only
+elif [ $1 == "cli" ]
+then
+	cli_buff
+else
+	echo "wrong command"
+	exit 1
+fi
+
+
+

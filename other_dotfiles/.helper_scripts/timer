@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+from time import sleep
+import os
+import sys
+
+minutes = int(sys.argv[1])
+seconds = int(sys.argv[2])
+to_wait = 0
+
+if(minutes != 0):
+    to_wait = (minutes*60)
+    if(seconds != 0):
+        to_wait += seconds
+else:
+    to_wait = seconds
+
+user_dir = os.path.expanduser("~/")
+
+for i in range(to_wait, 1, -1):
+    timerfile = open(user_dir+"timerfile", "w+")
+    if(to_wait >= 60):
+        m = i//60
+        s = i%60
+        timerfile.write("Timer: "+str(m)+" min "+str(s)+" sec")
+    else:
+        timerfile.write("Timer: "+str(i)+" sec")
+    timerfile.close()
+    sleep(1)
+
+# clear timer file
+timerfile = open(user_dir+"timerfile", "w+")
+timerfile.close()
+os.remove(user_dir+"timerfile")

@@ -1,0 +1,28 @@
+#!/usr/bin/bash
+
+# don't run with sudo, since the helper script directory
+# should only be added to the $PATH via a user's .profile
+
+connect_home() {
+	sudo wpa_supplicant -B -c /etc/wpa_supplicant/Moodley-5.conf -i wlan0
+}
+
+
+connect_school() {
+	sudo macchanger -r wlan0
+	sudo wpa_supplicant -B -c /etc/wpa_supplicant/school.conf -i wlan0
+
+}
+
+
+
+if [ $1 == "school" ]
+then
+	connect_school
+elif [ $1 == "home" ]
+then 
+	connect_home
+else
+	echo "wrong command"
+	exit 1
+fi

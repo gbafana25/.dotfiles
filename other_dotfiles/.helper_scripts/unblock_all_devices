@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "unblocking all radio devices"
+
+rfkill unblock all

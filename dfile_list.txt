@@ -4,3 +4,4 @@
 .xinitrc
 .vimrc
 .config/rofi/mytheme.rasi
+.helper_scripts/

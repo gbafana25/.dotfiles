@@ -53,7 +53,6 @@ install_pkgs() {
 
 
 restore_dotfiles() {
-	install_pkgs
 	while read -r file; do
 	cp -r $PD/$DFILES/$file $HOME_DIR/
 	done < dfile_list.txt
