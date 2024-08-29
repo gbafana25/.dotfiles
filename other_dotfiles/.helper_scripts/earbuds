@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$1" = "connect" ] || [ "$1" = "c" ]
+then
+	bluetoothctl connect F9:B5:76:A4:1C:84
+elif [ "$1" = "disconnect" ] || [ "$1" = "d" ]
+then
+	bluetoothctl disconnect
+fi
+
